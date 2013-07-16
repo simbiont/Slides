@@ -17,7 +17,13 @@ function init(height) {
 
 function slide(i) {	
 	var scrollHeight = 0;
-	var phoneImageHeight = $("#iphone_images").height();
+	var phoneImageHeight = $("#iphone_images_wrapper").height();
+	var mod;
+	if(i!=1) {
+		mod = i-1;
+	} else {
+		mod = 1;
+	}
 	for(l=1; l<=i-1; l++) {				
 		scrollHeight += $("#slide"+l).height();
 	}
@@ -28,15 +34,20 @@ function slide(i) {
 	if( topDown > i ) {
 		plus = i+1;
 		sign = "+";
+		revers = "-";
 	} else if (topDown < i) {
 		plus = i-1;
 		sign = "-";
+		revers = "+";
 	}
-	$('#iphone_image_'+plus).animate({
-		marginTop:sign+'='+phoneImageHeight
-	}, 2000, function() {
-		console.log("plus:"+plus, "i:"+i);
-	});
+	if(topDown != i) {
+
+		$('#iphone_images').animate({
+			marginTop:sign+'='+phoneImageHeight*mod
+		}, 2000, function() {
+			// console.log("plus:"+plus, "i:"+i);
+		});
+	}
 	$(".active").removeClass('active').addClass('nonactive');
 	$("#nav_slide"+i).removeClass('nonactive').addClass('active');
 	topDown = i;

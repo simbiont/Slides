@@ -24,6 +24,7 @@
 </head>
 <body>
 	<div id="wrapper">
+
 		<div id="navigation">
 			<a href="/" id="home_url"><img src="images/logo.png"></a>
 			<div id="nav_tabs">
@@ -31,20 +32,22 @@
 			</div>
 		</div>
 		<div id="iphone">
-			<ul id="iphone_images">
-				<li id="iphone_image_1">
-					<img height="100%" src="images/first_slide_phone.png">
-				</li>
-				<li id="iphone_image_2">
-					<img height="100%" src="images/second_slide_phone.png">
-				</li>
-				<li id="iphone_image_3">
-					<img height="100%" src="images/first_slide_phone.png">
-				</li>
-				<li id="iphone_image_3">
-					<img height="100%" src="images/second_slide_phone.png">
-				</li>
-			</ul>			
+			<div id="iphone_images_wrapper">
+				<ul id="iphone_images">
+					<li id="iphone_image_1">
+						<img height="100%" src="images/first_slide_phone.png">
+					</li>
+					<li id="iphone_image_2">
+						<img height="100%" src="images/second_slide_phone.png">
+					</li>
+					<li id="iphone_image_3">
+						<img height="100%" src="images/first_slide_phone.png">
+					</li>
+					<li id="iphone_image_3">
+						<img height="100%" src="images/second_slide_phone.png">
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div id="sections">	
 			<section id="slide1" class="main_image full_size">
