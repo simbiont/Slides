@@ -1,0 +1,148 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+body {
+	/*background-color: #000026;*/
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+}
+.bold {
+	font-weight: bold;
+}
+
+.large {
+	font-size: 1.5em;
+	letter-spacing: 2px;
+}
+
+#wrapper {
+	width: 100%;
+	position: relative;
+}
+
+/* Device */
+#iphone {
+	background: url("images/Black.png") no-repeat;
+	/*background-size: cover;*/
+	left: 50%;
+	position: fixed;
+	z-index: 100;
+	width: 250px;
+	height: 470px;
+	margin-left: -125px;
+	overflow: hidden;
+}
+
+#iphone_images {
+	padding: 0;
+	list-style: none;
+	width: 199px;
+	margin: 83px 0 0 22px;
+	height: 297px;
+	overflow: hidden;
+}
+#iphone_images li {
+	height: 100%;
+}
+/* Sections */
+#sections {
+	/*height: 100%;*/
+	width: 100%;
+	overflow: hidden;
+	/*margin-top: 40px;*/
+	position: relative;
+	z-index: 50;
+}
+
+.left_content, .right_content {
+	text-transform: uppercase;
+	font-weight: bold;	
+}
+
+.left_content {
+	position: absolute;
+	width: 20%;
+	left: 20%;
+	text-align: right;
+}
+
+.right_content {
+	position: absolute;
+	width: 20%;
+	right: 20%;
+	text-align: left;
+}
+
+.main_image {
+	width: 100%;
+	height: 100%;
+	border: none;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	display: block;
+	clear: both;
+	min-height: 1000px;
+	position: relative;
+}
+#slide1 {
+	background-color: #7f8c8d;
+}
+#slide2 {
+	background-color: #d68d00;
+	opacity: 0.6;
+}
+
+.slide2_border {
+	color: #fff60b;
+}
+
+#slide3 {
+	background-color: #000026;
+}
+#slide4 {
+	background-color: #000026;
+}
+.list_marker {
+	text-transform: uppercase;
+}
+
+/* Navigation */
+#navigation {
+	position: fixed;
+	top: 50px;
+	left: 100px;
+	z-index: 100;
+}
+#nav_tabs {
+	margin: 0 auto;
+	width: 15px;
+}
+#home_url {
+	color: white;
+	text-decoration: none;
+	/*font-size: 70px;*/
+}
+#navigation a {
+	text-align: center;
+}
+#navigation .nonactive, #navigation .active {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-bottom: 22px;
+}
+#navigation .nonactive:hover {
+	background-color: #ffffff;
+	opacity: .6;
+}
+#navigation .active {
+	background-color: #ffffff;
+	opacity: .6;
+}
+#navigation .nonactive {
+	background-color: #ffffff;
+	opacity: .3;
+}
