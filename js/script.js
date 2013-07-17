@@ -30,7 +30,7 @@ function slide(i) {
 
 	$('html, body').animate({
 		scrollTop: scrollHeight
-	}, 2000);
+	}, 5000);
 	if( topDown > i ) {
 		plus = i+1;
 		sign = "+";
@@ -42,11 +42,11 @@ function slide(i) {
 	}
 	if(topDown != i) {
 
-		$('#iphone_images').animate({
-			marginTop:sign+'='+phoneImageHeight*mod
-		}, 2000, function() {
-			// console.log("plus:"+plus, "i:"+i);
-		});
+		// $('#iphone_images').animate({
+		// 	marginTop:sign+'='+phoneImageHeight*topDown
+		// }, 2000, function() {
+
+		// });
 	}
 	$(".active").removeClass('active').addClass('nonactive');
 	$("#nav_slide"+i).removeClass('nonactive').addClass('active');
@@ -79,8 +79,22 @@ $(document).ready(function() {
 });
 // handle scroll
 function handleScroll(slides) {	
-	var slidesHeight = $(".main_image").height();	
+	var slidesHeight = $(".main_image").height();
+	var phoneHeight = $("#iphone_images li").height();
+	console.log(phoneHeight);
 	scrolledWin = getPageScroll();
+	var slide2 = $("#slide2").offset();
+	var phone = $("#iphone").offset();
+	slide2 = slide2.top;
+	phone = phone.top;
+	if( phone >= phoneHeight*2 && phone < phoneHeight*3 ) {
+		$("#iphone_images").css('margin-top', "-"+(phone-phoneHeight*2)+"px");
+
+	} else if (phone >= phoneHeight*3 ) {
+		$("#iphone_images").css('margin-top', "-"+phoneHeight+"px");
+	} else if (phone < phoneHeight*2 ) {
+		$("#iphone_images").css('margin-top', "0");
+	}
 
 	// if(scrolledWin%slidesHeight == 0)
 }
